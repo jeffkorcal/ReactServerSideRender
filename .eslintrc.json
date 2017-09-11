@@ -1,0 +1,22 @@
+{
+  "extends": [
+    // "airbnb",
+    "prettier", //allows prettier to run without airbnb yelling
+    "prettier/react" //allows prettier to run without airbnb yelling
+  ],
+  "plugins": ["prettier"],
+  "parser": "babel-eslint", //need if you are using flow
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true, //don't fail on things like window
+    "node": true, //don't fail on things like process.env
+    "jest": true
+  }
+}

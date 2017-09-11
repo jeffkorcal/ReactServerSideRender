@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "react",
+    "stage-2",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": "last 2 versions"
+        },
+        // so babel doesn't take care of the import statements to let webpack to treeshaking
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": ["babel-plugin-transform-class-properties"], // allows you to not have to write boilier plate class syntax
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    },
+    "server": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}
